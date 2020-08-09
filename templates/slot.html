@@ -1,0 +1,260 @@
+<style>
+  @media only screen and (max-width: 500px) {
+  .card-body h5
+  {
+    font-size: 11px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 ,p {
+    color: white !important;
+  }
+  .hero-wrap.hero-bread
+  {
+    background-image: url(../static/images/slot.jpeg) !important;
+  }
+}
+</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slots</title>
+    <link rel="icon" href="../static/images/mainlogo.png" type="image/icon type">
+    <meta charset="utf-8">
+    <meta id="my-data" data-slots="{{slots}}">
+    <meta id="date" data-date="{{date}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../static/css/aos.css">
+
+    <link rel="stylesheet" href="../static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../static/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+      h1 {
+        font-family: "Amatic SC", cursive;
+      }
+
+    </style>
+  </head>
+  <body class="goto-here">   
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/home" style="text-transform: none; position: relative;right:25px;">NoQ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse " id="ftco-nav" >
+        
+         <ul class="navbar-nav ml-auto">       
+          <li class="nav-item"><a href="/customer/{{shopid}}" class="nav-link">Inventory</a></li>
+        </ul>
+        <p style="text-align: center;"><a href="/logout" class="btn btn-primary" style="position: relative;top:7px">LOGOUT</a></p>
+      </div>
+    </div>
+  </nav>
+<!-- END nav -->
+<div class="hero-wrap hero-bread" style="background-image: url(../static/images/slot-booking.jpeg);">
+    <div class="container">
+        <div class="row justify-content-end" style="text-align: center;">
+            <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate ">
+                <!-- <span class="subheading">Best Price For You</span> -->
+              <h1 class="mb-0 bread" style="color: black;">TIME SLOT BOOKINGS</h1>
+              <p style="color: black;">BOOK A SLOT TO SHOP CONVENIENTLY</p>
+          </div>   		
+        </div>
+    </div>
+  </div>
+  
+  <section class="ftco-section ftco-cart">
+    <div style="overflow-x: auto;">
+      <br>
+      <h5 style="text-align: center;">Book Slots for {{date}}</h5>
+    <table style="width: 70%; margin-right:auto; margin-left: auto;"  >
+    <tr>
+        <th style="text-align:center; border: 1px solid rgb(206, 204, 204); width:80px; line-height:30px; color: black;">Slot Timing</th>
+        <th colspan="4" style="text-align:center; border: 1px solid rgb(206, 204, 204); width:80px; line-height:30px; color: black;">Book Slots </th>
+    </tr>
+    {% for i in range(s,e+1,1) %}
+    <tr class="rows">
+        <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:80px; line-height:30px; color: black; padding: 8px;">{{i}}.00-{{i}}.30</td>
+        <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px" onclick="myfunc(this.id,{{shopid}})" id="{{i}}.00-{{i}}.30-01" >Slot 1</button></td>
+        <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.00-{{i}}.30-02" >Slot 2</button></td>
+        <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.00-{{i}}.30-03" >Slot 3</button></td>
+        <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.00-{{i}}.30-04" >Slot 4</button></td>
+   </tr>
+   <tr class="rows">
+    <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:80px; line-height:30px; color: black; padding: 8px;">{{i}}.30-{{i+1}}.00</td>
+    <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px" onclick="myfunc(this.id,{{shopid}})" id="{{i}}.30-{{i+1}}.00-01" >Slot 1</button></td>
+    <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.30-{{i+1}}.00-02" >Slot 2</button></td>
+    <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.30-{{i+1}}.00-03" >Slot 3</button></td>
+    <td style="text-align:center; border: 1px solid rgb(206, 204, 204); width:60px; line-height:30px; color: black; padding: 8px;"><button class="btn btn-success" type="submit" style="width:80px"onclick="myfunc(this.id,{{shopid}})" id="{{i}}.30-{{i+1}}.00-04" >Slot 4</button></td>
+</tr>
+   {% endfor %}
+</table>
+</div>
+</section>
+
+
+
+  <div class="row justify-content-center" >     
+    <!-- <div class="col-sm-12 col-lg-4 justify-content-center" > -->
+    <div class="card text-center  " style="background-color: rgb(40, 167, 69);margin: 1%;width: 25%;">
+      <div class="card-body " style="padding: 5px;">
+        <h5 class="card-title " style="margin: 0px;font-size: 1em;">Available</h5>
+       </div>
+    </div>
+  <!-- </div> -->
+
+  <!-- <div class="col-sm-12 col-lg-4 justify-content-center">   -->
+    <div class="card text-center" style="background-color: rgb(108, 117, 125);margin: 1%;width: 25%;">
+      <div class="card-body" style="padding: 5px;"> 
+        <h5 class="card-title" style="margin: 0px;font-size: 1em;">Booked</h5>       
+      </div>
+    </div>
+  <!-- </div> -->
+
+  <!-- <div class="col-sm-12 col-lg-4 justify-content-center" >   -->
+    <div class="card text-center" style="background-color: rgb(220,53,69);margin: 1%;width: 25%;">
+      <div class="card-body" style="padding: 5px;">
+        <h5 class="card-title" style="margin: 0px;font-size: 1em;">Timed Out</h5>       
+      </div>
+    </div>
+  <!-- </div> -->
+
+</div>
+
+
+<br>
+
+
+
+
+
+    <!-- <div class="container">
+        <div style="text-align: center;">
+        <h5 style="line-height:3px ;background-color:rgb(40, 167, 69); display: inline;margin:20px; padding: 0px 10px" > Available</h5>
+    <h5 style="line-height:30px; color: black; background-color: rgb(108, 117, 125);display: inline;margin:20px; padding: 0px 10px">Booked</h5>
+    <h5 style="line-height:30px; color: black; background-color: rgb(220,53,69);display: inline;margin:20px; padding: 0px 10px">Timed Out</h5>
+    </div>
+</div>   -->
+
+<br>
+<footer>
+<section class="ftco-section img foot"  style="background-color: #82ae46;padding:0px;">
+    <div class="mouse">
+      <a href="#" class="mouse-icon">
+        <div class="mouse-wheel"><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
+      </a>
+    </div>
+        <div class="row" >
+          <div class="col-md-12 text-center" > 
+
+            <p style="padding-top: 35px;padding-bottom: 10px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> |  All rights reserved 
+                        </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery.easing.1.3.js"></script>
+<script src="../static/js/jquery.waypoints.min.js"></script>
+<script src="../static/js/jquery.stellar.min.js"></script>
+<script src="../static/js/owl.carousel.min.js"></script>
+<script src="../static/js/jquery.magnific-popup.min.js"></script>
+<script src="../static/js/aos.js"></script>
+<script src="../static/js/jquery.animateNumber.min.js"></script>
+<script src="../static/js/bootstrap-datepicker.js"></script>
+<script src="../static/js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="../static/js/google-map.js"></script>
+<script src="../static/js/main.js"></script>
+<script>
+  function myfunc(slotid,shopid){
+    var date = $('#date').data('date');
+    alert(slotid+" "+date);
+    $.post('/customer/dashboard',{
+      slotid:slotid,
+      shopid:shopid,
+      date:date
+    });
+    setTimeout(function(){window.location.href = "/customer/dashboard";}, 1000);
+     
+  }
+</script>
+<script>
+  var date = $('#date').data('date');
+  var x = document.getElementsByTagName("button")
+  var i,j;
+  var d = new Date();
+  var h = d.getHours();
+  var m = d.getMinutes();
+  var jsdate = d.getDate().toString()
+  var slots = $('#my-data').data('slots');
+  slots = slots.split("'");
+    for(i=1;i<=x.length;i++){
+    for(j=3;j<slots.length*4;j+=4){
+    if(x[i].id==slots[j]){
+      x[i].className = 'btn btn-dark'
+      x[i].disabled=true;
+    }
+    }
+    
+    if((parseInt(date.split("-")[2])).toString() == jsdate){
+      
+    if(parseInt(x[i].id.split(".",1)[0])<h){
+      x[i].className = 'btn btn-danger'
+      x[i].disabled = true;
+    }
+    if(parseInt(x[i].id.split(".",1)[0])<=h && parseInt(x[i].id.split("-",1)[0].split(".")[1])<=m){
+      x[i].className = 'btn btn-danger'
+      x[i].disabled = true;
+    }
+    }
+    }
+</script>
+<script>
+  var date = $('#date').data('date');
+  var d = new Date();
+  var mth = (d.getMonth()+1)
+  if (mth<10){
+  var today = d.getFullYear()+"-"+"0"+(d.getMonth()+1)+"-"+d.getDate()
+  }
+  else{
+    var today = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()
+  }
+  var d1 = today.toString()
+  if(date == d1){
+    $(".nav-item").show()
+  }
+  else{
+    $(".nav-item").hide()
+  }
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+   padding-left: 15px;
+
+
+}
+
+      h1 .head {
+        font-family: "Amatic SC", cursive;
+      }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inventory</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/images/mainlogo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../static/css/aos.css">
+
+    <link rel="stylesheet" href="../static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../static/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+	<link rel="stylesheet" href="../static/css/inventory.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  </head>
+  <body class="goto-here">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  	    <div class="container">
+  	      <a class="navbar-brand" href="/dashboard" style="text-transform: none; position: relative;right:25px;">NoQ</a>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+  	        <span class="oi oi-menu"></span> Menu
+  	      </button>
+
+  	      <div class="collapse navbar-collapse " id="ftco-nav" >
+  	        <ul class="navbar-nav ml-auto"  >
+  	          <li class="nav-item active"><a href="/dashboard" class="nav-link">dashboard</a></li>
+
+  	          <li class="nav-item"><a href="/shopkeeper/{{shop}}" class="nav-link">customise items</a></li>
+  	          <li class="nav-item"><a href="/booked/customer" class="nav-link">view bookings   </a></li>
+
+  			</ul>
+  			<p style="text-align: center;"><a href="/customer/login" class="btn btn-primary" style="position: relative;top:7px">LOGOUT</a></p>
+  	      </div>
+  	    </div>
+  	  </nav>
+    <div class="hero-wrap hero-bread" style="background-image: url('../static/images/cart.jpeg');">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-0 bread head" style="font-family: 'Amatic SC',cursive ;">customise items</h1>
+                <p class="breadcrumbs">inform the customers about availability of items in shop</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+	    <div class="container" style="text-align: center;" >
+		  <div class="row align-middle" style = "display: flex; justify-content: center; padding-top: 10px">
+		   	<button href="/shopkeeper/{{shop}}/additem" class="btn btn-primary" style="position: relative; background: black" onclick="showAddItem()">ADD A NEW ITEM</button>
+		  </div>
+    	</div>
+
+
+	<div class="register" id = "addItem" style="display:none">
+		<h1> Add a New Item	</h1>
+
+		<form action="/shopkeeper/{{shop}}" method="post" autocomplete="off">
+			<label for="name">
+				<i class="fas fa-seedling"></i>
+			</label>
+			<input type="text" name="name" placeholder="Item Name" id="name" required>
+
+			<label for="quantity">
+				<i class="fas fa-lock"></i>
+			</label>
+			<input type="text" name="quantity" placeholder="Quantity" id="quantity" required>
+			<label for="unit">
+				<i class="fas fa-balance-scale"></i>
+			</label>
+			<select id="unit" name="unit">
+				<option value="KG">Kg</option>
+				<option value="L">L</option>
+				<option value="DZ">Dz</option>
+				<option value="UT">Unit</option>
+			</select>
+			<input type="submit" value="ADD">
+		</form>
+	</div>
+
+	<script>
+	function showAddItem() {
+	  var x = document.getElementById("addItem");
+	  if (x.style.display === "none") {
+	    x.style.display = "block";
+	  } else {
+	    x.style.display = "none";
+	  }
+
+	}
+	</script>
+
+	    <section class="ftco-section ftco-cart">
+				<div class="container">
+					<div class="row">
+	    			<div class="col-md-12 ftco-animate">
+	    				<div class="cart-list">
+		    				<table class="table" style="table-layout: fixed;">
+							    <thead class="thead-primary">
+							      <tr class="text-center">
+							        <th></th>
+							        <th>Product List</th>
+							        <th>Quantity</th>
+							      </tr>
+							    </thead>
+							    <tbody>
+
+								{% for item in data %}
+
+							      <tr class="text-center">
+							        <td class="product-remove"><a href="/shopkeeper/{{item.shop_id}}/delete/{{item.id}}"><span class="far fa-trash-alt"></span></a></td>
+
+							        <td class="product-name">
+							        	<h3>{{ item.name }} ({{ item.unit }})</h3>
+							        </td>
+
+							        <td class="quantity">
+							        	<div class="input-group mb-3">
+						             	<form class="form-inline" action="/shopkeeper/{{shop}}/edit/{{item.id}}" method="post" autocomplete="off">
+											 <input  type="text" name="quantity" class="quantity form-control input-number" value="{{ item.quantity }}" min="1" max="100">
+											 <button type="submit" style="width: 30px!important;"><i class="fas fa-edit"></i></button>
+										</form>
+						          </td>
+
+							      </tr><!-- END TR-->
+
+								{% endfor %}
+							    </tbody>
+							  </table>
+						  </div>
+	    			</div>
+	    		</div>
+				</div>
+			</section>
+
+
+
+
+
+
+        <section class="ftco-section img"  style="background-color: #82ae46;padding:0px">
+            <div class="mouse">
+              <a href="#" class="mouse-icon">
+                <div class="mouse-wheel"><span><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
+              </a>
+            </div>
+                <div class="row" >
+                  <div class="col-md-12 text-center" >
+
+                    <p style="padding-top: 35px;padding-bottom: 10px;">
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> |  All rights reserved
+                                </p>
+                  </div>
+                </div>
+              </section>
+      <!-- </div>
+    </footer>  -->
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../static/js/popper.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/jquery.easing.1.3.js"></script>
+  <script src="../static/js/jquery.waypoints.min.js"></script>
+  <script src="../static/js/jquery.stellar.min.js"></script>
+  <script src="../static/js/owl.carousel.min.js"></script>
+  <script src="../static/js/jquery.magnific-popup.min.js"></script>
+  <script src="../static/js/aos.js"></script>
+  <script src="../static/js/jquery.animateNumber.min.js"></script>
+  <script src="../static/js/bootstrap-datepicker.js"></script>
+  <script src="../static/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../static/js/google-map.js"></script>
+  <script src="../static/js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+
+    var quantitiy=0;
+       $('.quantity-right-plus').click(function(e){
+
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+                $('#quantity').val(quantity + 1);
+
+
+                // Increment
+
+        });
+
+         $('.quantity-left-minus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+                // Increment
+                if(quantity>0){
+                $('#quantity').val(quantity - 1);
+                }
+        });
+
+	});
+	
+	
+</script>
+
+
+</body>
+</html>

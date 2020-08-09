@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Register</title>
+		<link rel="icon" href="../static/images/mainlogo.png" type="image/icon type">
+		<link rel="stylesheet" href="../static/css/login.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+			<h1>Shop Registration</h1>
+			<div class="links">
+				<a href="{{ url_for('login1') }}">Login</a>
+				<a href="{{ url_for('register1') }}" class="active">Register</a>
+			</div>
+			<form action="{{ url_for('register1') }}" method="post" autocomplete="off">
+				<label for="username">
+					<!-- <i class="fas fa-user"></i> -->
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<!-- <i class="fas fa-lock"></i> -->
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="owner">
+						<!-- <i class="fas fa-user"></i> -->
+				</label>
+                <input type="text" name="ownername" placeholder="Owner Name" id="owner" required>
+                <label for="shopname">
+                    <!-- <i class="fas fa-user"></i> -->
+                </label>
+                <input type="text" name="shopname" placeholder="Shop Name" id="shopname" required>
+                <label for="mobile">
+                    <!-- <i class="fas fa-user"></i> -->
+                </label>
+                <input type="tel" name="mobile" placeholder="Mobile Number" id="mobile" required>
+                <label for="address">
+                    <!-- <i class="fas fa-user"></i> -->
+                </label>
+                <input type="text" name="address" placeholder="Address" id="address" required>
+				<label for="region">
+					<!-- <i class="fas fa-user"></i> -->
+				</label>
+				<select id="region" name="region">
+					<option value="region1">Region1</option>
+					<option value="region2">Region2</option>
+				  </select>
+				<div class="msg">{{msg}}</div>
+				<input type="submit" value="Register">
+				<p style="background: transparent;">Not a Shopkeeper? Log in as <a href="/customer/login">Customer</a></p>
+			</form>
+			
+		</div>
+	</body>
+</html>
