@@ -1,0 +1,278 @@
+<style>
+  .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto !important;
+        touch-action: auto !important;
+}
+   @media only screen and ( max-width: 767.98px ){ 
+     .owl-carousel.home-slider {   
+    height: 100% !important;
+    }
+    .owl-carousel.home-slider .slider-item {
+      height: 100% !important;
+     }
+     .owl-carousel.home-slider .slider-item .slider-text {
+        height: 100% !important;
+     } 
+     #home-section
+     {
+       height:70% !important;
+     }
+  .abc
+  {
+display: none;
+  }
+  } 
+  @media only screen and ( max-width: 1040px ){ 
+  .abc
+  {
+height: 130px !important;
+width: 350px !important;
+position: relative;
+left:-50px;
+vertical-align: center;
+  }
+  } 
+</style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NoQ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="../static/manifest.json">
+    <script src="../static/service-worker.js"></script>
+    <link rel="icon" href="../static/images/mainlogo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body class="goto-here">
+		
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/home" style="text-transform: none; position: relative;right:25px;">NoQ</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse " id="ftco-nav" >
+	        <ul class="navbar-nav ml-auto"  >
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+	          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+	          <!-- <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
+
+			</ul>
+			<p style="text-align: center;"><a href="/customer/login" class="btn btn-primary" style="position: relative;top:7px">LOGIN / SIGN UP</a></p>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item" style="background-image: url(../static/images/collage.jpg);">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+	            <div class="col-md-12 ftco-animate text-center">
+				  <h1 class="mb-2" style="text-transform: none;">WELCOME TO NoQ</h1>
+				  <h2 class="subheading mb-4" style="font-size:14px">buy essentials with safe virtual queuing system  </h2>
+	            
+	            </div>
+
+	          </div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item" style="background-image: url(../static/images/queue2.jpg);">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+	            <div class="col-sm-12 ftco-animate text-center">
+				  <h1 class="mb-2">manage customer flows</h1>
+				  <h2 class="subheading mb-4" style="font-size:14px"><b>Limit the number of customers in the store </b>
+	            </div>
+
+	          </div>
+	        </div>
+		  </div>
+		  
+		  
+	      <div class="slider-item" style="background-image: url(../static/images/queue1.jpeg);">
+			<div class="overlay"></div>
+		  <div class="container">
+			<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+			  <div class="col-sm-12 ftco-animate text-center">
+				<h1 class="mb-2">Avoid Physical queues</h1>
+				<h2 class="subheading mb-4" style="font-size:14px"><b>There's no need to queue outside the 
+					store<br><br>Customers can wait in the comfort of their home</b></h2>
+
+				<!-- <p><a href="#" class="btn btn-primary">View Details</a></p> -->
+			  </div>
+
+			</div>
+		  </div>
+		</div>
+	    </div>
+	</section>
+	
+
+    <section class="ftco-section" style="padding: 5em 0;">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            		<span ><i class="fa fa-mobile" aria-hidden="true"></i></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">flexible slot bookings</h3>
+                <span>book a time slot to a shop in advance</span>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            		<span ><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">no waiting time</h3>
+                <span>arrive at a scheduled time to avoid waiting in line</span>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">efficient</h3>
+                <span>productive communication between shopkeeper and customer</span>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            		<span><i class="fa fa-check" aria-hidden="true"></i></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">no set up</h3>
+                <span>everything works using a simple web interface</span>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+
+		
+		
+		<section class="ftco-section img" style="background-image: url(../static/images/wheat.jpg); padding: 7em 0;" >
+    	<!-- <div class="container"> -->
+        
+				<div class="row justify-content-end" style="text-align: center;">
+          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+          	<!-- <span class="subheading">Best Price For You</span> -->
+            <h2 class="mb-4" style="color: white;">Know How It Works</h2>
+            <p style="color: white;">Practice Social Distancing and switch to appointment based shopping of 
+				essentials. <br><br>Wondering how it works? We are here to help.</p>
+		  <p><a href="/about" class="btn btn-primary">View Details</a></p>
+		</div>   		
+      </div>
+      
+    </section>
+    <section class="ftco-section img" style=" padding: 7em 0;" >
+    	<!-- <div class="container"> -->
+        
+				<div class="row " style="text-align: center;">
+          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+          	<!-- <span class="subheading">Best Price For You</span> -->
+            <h3 class="mb-4 " style="color: black;">Have any queries?</h3>
+            <p style="color: black;">Feel free to reach us</p>
+      <p><a href="/contact" class="btn btn-primary">Contact us</a></p>       
+    
+    </div>  
+    <img src="../static/images/contact.png " class="img-responsive abc" style="height: 190px;width: 510px;vertical-align: middle;float: right;position: relative;right: 80px;"> 		
+      </div>
+      
+    </section>
+    <section class="ftco-section img"  style="background-color: #82ae46;padding:0px">
+    <div class="mouse">
+      <a href="#" class="mouse-icon">
+        <div class="mouse-wheel"><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
+      </a>
+    </div>
+        <div class="row" >
+          <div class="col-md-12 text-center" > 
+
+            <p style="padding-top: 35px;padding-bottom: 10px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> |  All rights reserved 
+						</p>
+          </div>
+        </div>
+      </section>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+   <script>
+     if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('./service-worker.js')
+    .then(function(registration) {
+        console.log('Service Worker Registered!');
+        return registration;
+    })
+    .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+    });
+  }
+   </script>   
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../static/js/popper.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/jquery.easing.1.3.js"></script>
+  <script src="../static/js/jquery.waypoints.min.js"></script>
+  <script src="../static/js/jquery.stellar.min.js"></script>
+  <script src="../static/js/jquery.magnific-popup.min.js"></script>
+  <script src="../static/js/owl.carousel.min.js"></script>
+  <script src="../static/js/aos.js"></script>
+  <script src="../static/js/jquery.animateNumber.min.js"></script>
+  <script src="../static/js/bootstrap-datepicker.js"></script>
+  <script src="../static/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../static/js/google-map.js"></script>
+  <script src="../static/js/main.js"></script>
+    
+  </body>
+</html>
