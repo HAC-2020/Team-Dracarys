@@ -1,0 +1,18 @@
+version: "2"
+services:
+  app:
+    build: .
+    links:
+      - db
+    ports:
+      - "5001:5001"
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ETintB86zfDXSCCMrspY
+    #   MYSQL_USER: 
+      MYSQL_PASSWORD: ETintB86zfDXSCCMrspY
+      MYSQL_DATABASE: b12wunhvgwb3vymtqngg

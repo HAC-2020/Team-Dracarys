@@ -1,0 +1,33 @@
+{
+    "name": "NoQ",
+    "short_name": "NoQ",
+    "theme_color": "#CBD394",
+    "Scope" : "/",
+    "background_color": "#F1F7C6",
+    "icons": [
+      {
+          "src": "/static/images/icon-64.png",
+          "type": "image/png",
+          "sizes": "64x64"
+        },
+        {
+          "src": "/static/images/icon-96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "/static/images/icon-192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/static/images/icon-512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "splash_pages": null
+  }

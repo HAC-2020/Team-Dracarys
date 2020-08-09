@@ -1,0 +1,210 @@
+<style>
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+   padding-left: 15px;
+
+}
+     
+
+    
+
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Customer Iventory</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../static/images/mainlogo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../static/css/aos.css">
+
+    <link rel="stylesheet" href="../static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../static/css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+	<link rel="stylesheet" href="../static/css/inventory.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  </head>
+  <body class="goto-here">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	  	<div class="container">
+	  	  <a class="navbar-brand" href="index.html" style="text-transform: none; position: relative;right:25px;">NoQ</a>
+	  	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	  		<span class="oi oi-menu"></span> Menu
+	  	  </button>
+
+	  	  <div class="collapse navbar-collapse " id="ftco-nav" style="padding: 8px;">
+	  		 <ul class="navbar-nav ml-auto"  >
+	  		  <li class="nav-item"><a href="/today/slots" class="nav-link"> </a></li>
+	  		</ul>
+	  		<p style="text-align: center;"><a href="/logout" class="btn btn-primary" style="position: relative;top:7px">LOGOUT</a></p>
+	  	  </div>
+	  	</div>
+	    </nav>
+	  <!-- END nav -->
+
+    <div class="hero-wrap hero-bread" style="background-image: url('../static/images/fruits.jpg');">
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-0 bread head" style="font-family: 'Amatic SC',cursive ;">view shop items</h1>
+                <p class="breadcrumbs">have a look at available items in shop</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
+          	<span class="subheading" style="font-size: 30px;">Inventory</span>
+            </div>
+        </div>
+    	</div>
+
+		<div class="container" style="display: flex">
+			<div class="box" style="  flex: 1;  display: flex;   justify-content: center;">
+			</div>
+			<div class="row" style=" display: flex; justify-content: center;">
+				{% for item in data %}
+				<div class="col-md-6 col-lg-3 ftco-animate fadeInUp ftco-animated" >
+					<div class="product">
+						<a href="#" class="img-prod"><img class="img-fluid" src="../static/images/category.jpg" alt="Colorlib Template">
+							<div class="overlay"></div>
+						</a>
+						<div class="text py-3 pb-4 px-3 text-center">
+							<h3><a href="#">{{ item.name }} ({{ item.unit }})</a></h3>
+							<div class="d-flex">
+								<div class="pricing">
+									<p class="price"><span>{{ item.quantity }}</span></p>
+								</div>
+							</div>
+							</div>
+							</div>
+						</div>
+				{% endfor %}
+
+			</div>
+			<div class="box" style="  flex: 1;  display: flex;   justify-content: center;">
+			</div>
+
+		</div>
+
+
+    </section>
+
+
+
+
+
+
+        <section class="ftco-section img"  style="background-color: #82ae46;padding:0px">
+            <div class="mouse">
+              <a href="#" class="mouse-icon">
+                <div class="mouse-wheel"><span><i class="fa fa-chevron-up" aria-hidden="true"></i></span></div>
+              </a>
+            </div>
+                <div class="row" >
+                  <div class="col-md-12 text-center" >
+
+                    <p style="padding-top: 35px;padding-bottom: 10px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> |  All rights reserved
+                                </p>
+                  </div>
+                </div>
+              </section>
+      <!-- </div>
+    </footer>  -->
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../static/js/popper.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/jquery.easing.1.3.js"></script>
+  <script src="../static/js/jquery.waypoints.min.js"></script>
+  <script src="../static/js/jquery.stellar.min.js"></script>
+  <script src="../static/js/owl.carousel.min.js"></script>
+  <script src="../static/js/jquery.magnific-popup.min.js"></script>
+  <script src="../static/js/aos.js"></script>
+  <script src="../static/js/jquery.animateNumber.min.js"></script>
+  <script src="../static/js/bootstrap-datepicker.js"></script>
+  <script src="../static/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="../static/js/google-map.js"></script>
+  <script src="../static/js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+
+    var quantitiy=0;
+       $('.quantity-right-plus').click(function(e){
+
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+                $('#quantity').val(quantity + 1);
+
+
+                // Increment
+
+        });
+
+         $('.quantity-left-minus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+
+            // If is not undefined
+
+                // Increment
+                if(quantity>0){
+                $('#quantity').val(quantity - 1);
+                }
+        });
+
+    });
+</script>
+
+</body>
+</html>

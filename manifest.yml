@@ -1,0 +1,4 @@
+applications:
+    - name: noqueue
+      random-route: true
+      memory: 256M
